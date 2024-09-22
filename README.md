@@ -42,8 +42,14 @@ We're submitting for the following prizes:
 - **Node.js & Express.js**: Creating a robust and scalable server.
   - **Axios**: Managing API integrations.
   - **Body-Parser & JSON**: Parsing incoming request bodies.
-  - **OpenAI**: Utilizing GPT-4 for advanced data analysis and predictions.
+  - **OpenAI**: Utilizing Vision gpt4o for advanced data analysis and predictions.
   - **Python (`predict.py`)**: Handling image classification and predictions.
+- **Advanced AI and Computer Vision**
+  - **Vision4o Pretrained Model by OpenAI**: Leveraging advanced models for image analysis.
+  - **YOLO (You Only Look Once)**: Implementing real-time object detection for enhanced image processing.
+  - **Optimized File Transfer**: Utilizing Base64 Encoding and Multipart Form Data for efficient data transmission.
+
+For image analysis, we employed **Vision4o**, a pretrained model by OpenAI, alongside **YOLO** for real-time object detection. These technologies work in tandem to analyze tongue images comprehensively, identifying key health indicators with precision.
 
 ### Hardware Backend
 
@@ -58,11 +64,6 @@ We're submitting for the following prizes:
 - **Docker**: Containerizing applications for consistent environments.
 - **Shell Scripts**: Automating DevOps processes to streamline development workflows.
 
-### AI & Computer Vision
-
-- **Vision4o Pretrained Model by OpenAI**: Leveraging advanced models for image analysis.
-- **YOLO (You Only Look Once)**: Implementing real-time object detection for enhanced image processing.
-- **Optimized File Transfer**: Utilizing Base64 Encoding and Multipart Form Data for efficient data transmission.
 
 ### Hardware Components
 
@@ -74,10 +75,6 @@ We're submitting for the following prizes:
 
 We built the frontend using **React.js**, incorporating the **Webcam** API to allow users to capture real-time images of their tongues. **Axios** handles all HTTP requests, ensuring smooth communication between the client and server.
 
-### Backend Integration
-
-Our backend, built with **Node.js** and **Express.js**, integrates multiple libraries such as **Axios** for API calls, **body-parser** for parsing JSON requests, and **OpenAI** for leveraging GPT-4's capabilities. We also implemented a Python script (`predict.py`) to handle image classification tasks, ensuring efficient and accurate predictions.
-
 ### Hardware Communication
 
 The hardware backend is powered by **Flask**, which communicates with an Arduino device equipped with the **MAX30105 Heartbeat Sensor**. Using **PySerial**, we establish a serial connection between Flask and Arduino, allowing real-time heartbeat monitoring. Flask endpoints driven by Arduino data ensure continuous and reliable data flow.
@@ -86,9 +83,6 @@ The hardware backend is powered by **Flask**, which communicates with an Arduino
 
 We utilized **Defang Cloud** to orchestrate our Docker containers, ensuring scalable and manageable deployments. Docker containers encapsulate both frontend and backend services, providing consistent environments across development and production.
 
-### Advanced AI and Computer Vision
-
-For image analysis, we employed **Vision4o**, a pretrained model by OpenAI, alongside **YOLO** for real-time object detection. These technologies work in tandem to analyze tongue images comprehensively, identifying key health indicators with precision.
 
 ### Optimized Data Handling
 
@@ -100,7 +94,7 @@ Our DevOps process is streamlined using shell scripts (`run.sh`), automating tas
 
 ## Metrics & Algorithms
 
-ChiBalance employs a combination of machine learning algorithms and predefined metrics to assess tongue health. The integration of GPT-4 enhances the depth of analysis, providing insightful health recommendations based on both visual and symptom data.
+ChiBalance employs a combination of machine learning algorithms and predefined metrics to assess tongue health. The integration of gpt4o-4 enhances the depth of analysis, providing insightful health recommendations based on both visual and symptom data.
 
 ## Learn More
 
