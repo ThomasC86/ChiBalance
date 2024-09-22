@@ -9,7 +9,6 @@ import {classify, predict} from './classification.js';
 import {downloadfiledirectory} from "./downdir.js";
 import {exec} from "child_process";
 
-import { classify } from './classification.js';
 const server = process.env.SERVER || "http://localhost:4000";
 const port = process.env.PORT || 4000;
 dotenv.config();

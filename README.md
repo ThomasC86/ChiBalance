@@ -64,7 +64,6 @@ For image analysis, we employed **Vision4o**, a pretrained model by OpenAI, alon
 - **Docker**: Containerizing applications for consistent environments.
 - **Shell Scripts**: Automating DevOps processes to streamline development workflows.
 
-
 ### Hardware Components
 
 - **MAX30105 Heartbeat Sensor**: Analyzing heartbeat data to complement tongue health assessments.
@@ -75,6 +74,14 @@ For image analysis, we employed **Vision4o**, a pretrained model by OpenAI, alon
 
 We built the frontend using **React.js**, incorporating the **Webcam** API to allow users to capture real-time images of their tongues. **Axios** handles all HTTP requests, ensuring smooth communication between the client and server.
 
+### Backend Development
+
+The backend is powered by **Node.js** and **Express.js**, providing a robust and scalable server. We use **Axios** for managing API integrations and **Body-Parser** for parsing incoming request bodies. The backend also leverages **OpenAI**'s Vision gpt4o for advanced data analysis and predictions, with **Python** scripts (`predict.py`) handling image classification and predictions.
+
+### Advanced AI and Computer Vision
+
+For image analysis, we employed **Vision4o**, a pretrained model by OpenAI, alongside **YOLO** for real-time object detection. These technologies work in tandem to analyze tongue images comprehensively, identifying key health indicators with precision. We also optimized file transfer using **Base64 Encoding** and **Multipart Form Data** for efficient data transmission.
+
 ### Hardware Communication
 
 The hardware backend is powered by **Flask**, which communicates with an Arduino device equipped with the **MAX30105 Heartbeat Sensor**. Using **PySerial**, we establish a serial connection between Flask and Arduino, allowing real-time heartbeat monitoring. Flask endpoints driven by Arduino data ensure continuous and reliable data flow.
@@ -82,7 +89,6 @@ The hardware backend is powered by **Flask**, which communicates with an Arduino
 ### Cloud Orchestration
 
 We utilized **Defang Cloud** to orchestrate our Docker containers, ensuring scalable and manageable deployments. Docker containers encapsulate both frontend and backend services, providing consistent environments across development and production.
-
 
 ### Optimized Data Handling
 
