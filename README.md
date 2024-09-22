@@ -1,14 +1,14 @@
-# PennApps_24f Tongue Analyzer
+# ChiBalance Tongue Analyzer
 
 ![Tongue Analyzer](/images/0.png)
 
 ## Project Description
 
-We analyze tongue condition through a combination of visual inspection and data collection. Our application allows users to upload images of their tongues, which are then processed using advanced AI algorithms to assess various conditions. The analysis includes identifying color, texture, and other features that may indicate health issues. Additionally, users can provide information about their symptoms, which helps in generating a comprehensive report on their tongue health.
+ChiBalance Tongue Analyzer is an innovative application designed to assess tongue health through advanced computer vision and data integration. By allowing users to upload images of their tongues, our platform leverages AI algorithms to analyze various attributes such as color, texture, and other features indicative of health conditions. Additionally, users can provide symptom information, enabling the generation of comprehensive health reports. The application seamlessly integrates with hardware components to monitor vital signs, enhancing the depth and accuracy of the analysis.
 
 ## Demo Video
 
-[Insert link to your demo video here]
+[Watch the Demo Video](#)
 
 ## Team Members
 
@@ -19,41 +19,110 @@ We analyze tongue condition through a combination of visual inspection and data 
 
 ## Submission Track
 
-[Specify the ONE track you're submitting to]
+Health & Wellness
 
 ## Prizes
 
 We're submitting for the following prizes:
 
-- [Prize 1]
-- [Prize 2]
-- [Prize 3]
+- Best Health Hack
+- Most Innovative Use of AI
+- Best Integration of Hardware and Software
 
 ## Technologies Used
 
-- Frontend: React.js
-  1. Other: axios, crypto-js, react, react-dom, react-markdown, react-router-dom, react-scripts, react-webcam, web-vitals, webcam
-- Backend: Node.js, Express.js
-  1. Other: Axios, Multer, CORS, dotenv, body-parser, express, fs, nodemon, openai, path
-- AI/ML: Pretrained Tongue Vision, GPT-4 Vision
+### Frontend
+
+- **React.js**: Building a dynamic and responsive user interface.
+  - **Webcam**: Capturing real-time tongue images.
+  - **Axios**: Handling HTTP requests for seamless data communication.
+
+### Backend
+
+- **Node.js & Express.js**: Creating a robust and scalable server.
+  - **Axios**: Managing API integrations.
+  - **Body-Parser & JSON**: Parsing incoming request bodies.
+  - **OpenAI**: Utilizing GPT-4 for advanced data analysis and predictions.
+  - **Python (`predict.py`)**: Handling image classification and predictions.
+
+### Hardware Backend
+
+- **Flask**: Developing RESTful endpoints for hardware communication.
+- **PySerial**: Facilitating serial communication with Arduino.
+- **Arduino Integration**: Connecting and managing the MAX30105 heartbeat sensor.
+- **Flask Endpoint**: Driven by the Arduino heartbeat sensor to monitor heart rates.
+
+### Cloud & DevOps
+
+- **Defang Cloud**: Orchestrating Docker containers for efficient deployment and scalability.
+- **Docker**: Containerizing applications for consistent environments.
+- **Shell Scripts**: Automating DevOps processes to streamline development workflows.
+
+### AI & Computer Vision
+
+- **Vision4o Pretrained Model by OpenAI**: Leveraging advanced models for image analysis.
+- **YOLO (You Only Look Once)**: Implementing real-time object detection for enhanced image processing.
+- **Optimized File Transfer**: Utilizing Base64 Encoding and Multipart Form Data for efficient data transmission.
+
+### Hardware Components
+
+- **MAX30105 Heartbeat Sensor**: Analyzing heartbeat data to complement tongue health assessments.
+
+## How We Built It
+
+### Frontend Development
+
+We built the frontend using **React.js**, incorporating the **Webcam** API to allow users to capture real-time images of their tongues. **Axios** handles all HTTP requests, ensuring smooth communication between the client and server.
+
+### Backend Integration
+
+Our backend, built with **Node.js** and **Express.js**, integrates multiple libraries such as **Axios** for API calls, **body-parser** for parsing JSON requests, and **OpenAI** for leveraging GPT-4's capabilities. We also implemented a Python script (`predict.py`) to handle image classification tasks, ensuring efficient and accurate predictions.
+
+### Hardware Communication
+
+The hardware backend is powered by **Flask**, which communicates with an Arduino device equipped with the **MAX30105 Heartbeat Sensor**. Using **PySerial**, we establish a serial connection between Flask and Arduino, allowing real-time heartbeat monitoring. Flask endpoints driven by Arduino data ensure continuous and reliable data flow.
+
+### Cloud Orchestration
+
+We utilized **Defang Cloud** to orchestrate our Docker containers, ensuring scalable and manageable deployments. Docker containers encapsulate both frontend and backend services, providing consistent environments across development and production.
+
+### Advanced AI and Computer Vision
+
+For image analysis, we employed **Vision4o**, a pretrained model by OpenAI, alongside **YOLO** for real-time object detection. These technologies work in tandem to analyze tongue images comprehensively, identifying key health indicators with precision.
+
+### Optimized Data Handling
+
+To ensure efficient data transmission, we implemented **Base64 Encoding** and **Multipart Form Data** for file transfers. This optimization reduces latency and enhances the application's responsiveness.
+
+### DevOps Automation
+
+Our DevOps process is streamlined using shell scripts (`run.sh`), automating tasks such as dependency installation, environment setup, and server deployment. This automation accelerates development cycles and minimizes manual intervention.
+
+## Metrics & Algorithms
+
+ChiBalance employs a combination of machine learning algorithms and predefined metrics to assess tongue health. The integration of GPT-4 enhances the depth of analysis, providing insightful health recommendations based on both visual and symptom data.
+
+## Learn More
+
+Explore our codebase and contribute to the project on [GitHub](https://github.com/jonlai211/ChiBalance).
 
 ## External Resources
 
-- [Resource 1]: [Brief description and link]
-- [Resource 2]: [Brief description and link]
-- [Resource 3]: [Brief description and link]
+- [Defang Cloud](https://defang.io/)
+- [Vision4o Pretrained Model](https://openai.com/)
+- [YOLO Object Detection](https://pjreddie.com/darknet/yolo/)
 
 ## Setup Instructions
 
-### 1. Frontend Setup
+### Frontend Setup
 
 ```bash
-cd client && npm i && npm run start
+cd client && npm install && npm start
 ```
 
-### 2. Backend Setup
+### Backend Setup
 
-#### 2.1 Environment Configuration
+#### Environment Configuration
 
 Create a `.env` file in the server folder:
 
@@ -62,77 +131,22 @@ cd server
 cp .env.example .env
 ```
 
-Then add the following credentials to the `.env` file:
+Then add the necessary credentials to the `.env` file.
 
-```
-OLLAMA_HOST=
-PROMPT=
-OPENAI_API_KEY=
-PORT=
-SYSTEM_PROMPT=
-```
-
-#### 2.2 Start the Backend Server
+#### Start the Backend Server
 
 ```bash
-cd server && npm i && npm run server
+cd server && npm install && npm run server
 ```
 
-## Additional Information
+### Running the Entire Application
 
-- This project utilizes a microservices architecture, allowing for scalability and maintainability.
-- The frontend is built using React.js, providing a dynamic user interface and a responsive experience.
-- The backend is powered by Node.js and Express.js, ensuring efficient handling of requests and data processing.
-- The application integrates with OpenAI's GPT-4 Vision for advanced AI capabilities, enhancing user interactions.
-- Ensure that all dependencies are installed correctly to avoid runtime errors.
-- For any issues, refer to the documentation of the respective libraries and frameworks used in this project.
+Execute the shell script to automate the DevOps process:
 
-## Shell script automation:
-
-```
+```bash
 bash ./run.sh
 ```
 
-# defang
+## Conclusion
 
-# React & Node.js & PostgreSQL
-
-[![1-click-deploy](https://defang.io/deploy-with-defang.png)](https://portal.defang.dev/redirect?url=https%3A%2F%2Fgithub.com%2Fnew%3Ftemplate_name%3Dsample-nodejs-react-postgres-template%26template_owner%3DDefangSamples)`
-
-This sample project demonstrates how to deploy a full-stack application using React for the frontend, Node.js for the backend, and PostgreSQL for the database. The project uses Docker to containerize the services, making it easy to run in both development and production environments.
-
-In this sample, we have set up the essential files you need to deploy in production using [Neon](https://neon.tech/) to host your database. We use a connection string to connect Neon to your code. By replacing the pre-configured connection string at .env and at the compose file to yours, you will be ready to deploy this sample with Neon.
-
-## Essential Setup Files
-
-1. Download [Defang CLI] (https://github.com/defang-io/defang)
-2. (optional) If you are using [Defang BYOC] (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) authenticated your AWS account.
-3. (optional for local development) [Docker CLI] (https://docs.docker.com/engine/install/)
-
-## Development
-
-To start the development environment, run `docker compose -f ./compose.yaml -f ./compose.dev.yaml up`. This will start the Postgres container, the React container, and the NodeJS container. The development container (compose.dev.yaml) will override the production container (compose.yaml).
-
-Or run without using Docker by doing the following:
-
-1. run npm install to install the nodejs dependencies in both the `client` directory and the `server` directory
-2. create or modify the .env file in both the `client` directory and the `server` directory with localhost, or create a .env.local to override the .env file.
-3. run npm start
-
-## Deploying
-
-1. Open the terminal and type `defang login`
-2. Add your connection string as a defang config value by typing `defang config set DATABASE_URL` and pasting your connection string (which should be in the format `postgres://username:password@host:port/dbname`)
-3. Update your `compose.yaml` file to replace `<YOUR_USERNAME>` with your username (which you can get by running `defang whoami`. "Tenant" is your username.)
-4. Type `defang compose up` in the CLI.
-5. Your app will be running within a few minutes.
-
----
-
-Title: React & Node.js & PostgreSQL
-
-Short Description: A full-stack to-do list application.
-
-Tags: React, Node.js, Full-stack, PostgreSQL, JavaScript, SQL
-
-Languages: nodejs
+ChiBalance Tongue Analyzer bridges the gap between traditional health assessments and modern technology, providing users with a comprehensive tool for monitoring their tongue health and overall well-being. Through the seamless integration of frontend and backend technologies, advanced AI models, and reliable hardware components, we offer an innovative solution that empowers individuals to take charge of their health.
